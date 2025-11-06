@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        const double valorBasico = 50.00;
+        const int franquia = 100;
+        const double valorMinutoExtra = 2.00;
+
+        Console.Write("Minutos utilizados: ");
+        int minutos = int.Parse(Console.ReadLine());
+
+        double valorTotal = valorBasico;
+        if (minutos > franquia)
+        {
+            valorTotal += (minutos - franquia) * valorMinutoExtra;
+        }
+
+        Console.WriteLine($"Valor a pagar: R$ {valorTotal:F2}");
+    }
+}
